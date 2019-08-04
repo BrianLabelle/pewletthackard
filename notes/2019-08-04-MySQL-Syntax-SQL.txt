@@ -1,3 +1,5 @@
+2019-08-04-MySQL-SQL to Generate Database & Tables.
+
 CREATE TABLE `pewlett_hackard`.`employees` (
   `emp_no` INT NOT NULL,
   `birth_date` DATETIME NOT NULL,
@@ -18,7 +20,6 @@ CREATE TABLE `pewlett_hackard`.`departments` (
 CREATE TABLE `pewlett_hackard`.`dept_emp` (
   `emp_no` INT NOT NULL,
   `dept_no` VARCHAR(4) NOT NULL,
-  `dept_empcol` VARCHAR(45) NOT NULL,
   `from_date` DATETIME NOT NULL,
   `to_date` DATETIME NOT NULL DEFAULT '9999-01-01');
 
