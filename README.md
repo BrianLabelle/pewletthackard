@@ -1,8 +1,6 @@
-# pewletthackard
+# Unit 7 Homework: Employee Database: A Mystery in Two Parts
 
-# Unit xxxx Homework: Employee Database: A Mystery in Two Parts
-
-![PewlettHackard](images\ph-logo-trimmed.jpg)
+![PewlettHackard](images/ph-logo-trimmed.jpg)
 
 
 ## Background
@@ -14,6 +12,10 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 1. Data Modeling
 2. Data Engineering
 3. Data Analysis
+
+# Data Modeling
+
+![PH-Data-Modeling](resources/2019-PH-SQL-ER-Diagram-Using-MySQL.png)
 
 ## Summary
 
