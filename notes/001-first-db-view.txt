@@ -1,0 +1,51 @@
+01. employees
+emp_no 		number 7.0
+birth_date	date
+first_name	varchar 30
+last_name	varcahr 30
+gender		char (1)
+hire_date	date
+
+02. departments
+dept_no	varchar ( 4 ) PK NN
+dept_name ( varchar 30 ) NN
+
+
+03. dept_emp
+emp_no	number 5.0 PK NN
+dept_no	varchar ( 4 ) FK NN
+from_date date	
+to_date date 1/1/9999 unless fired.
+
+
+04. dept_manager
+dept_no			varchar ( 4 )
+emp_no			number 5.0
+from_date 		date	
+to_date			date
+
+#005DA3
+
+
+05. salaries
+emp_no		number 7.0
+salary		double currentcy
+from_date	date
+to_date		date
+
+06. titles
+emp_no		number 7.0	
+title		varcha 30
+from_date	date
+to_date		date
+
+
+
+
+
+
+
+
+
+
+
