@@ -1,0 +1,25 @@
+dept_no,dept_name,emp_no,last_name,first_name,from_date,to_date
+d001,Marketing,110022,Markovitch,Margareta,1/1/1985,10/1/1991
+d001,Marketing,110039,Minakawa,Vishwani,10/1/1991,1/1/9999
+d002,Finance,110085,Alpin,Ebru,1/1/1985,12/17/1989
+d002,Finance,110114,Legleitner,Isamu,12/17/1989,1/1/9999
+d003,Human Resources,110183,Ossenbruggen,Shirish,1/1/1985,3/21/1992
+d003,Human Resources,110228,Sigstam,Karsten,3/21/1992,1/1/9999
+d004,Production,110303,Wegerle,Krassimir,1/1/1985,9/9/1988
+d004,Production,110344,Cools,Rosine,9/9/1988,8/2/1992
+d004,Production,110386,Kieras,Shem,8/2/1992,8/30/1996
+d004,Production,110420,Ghazalie,Oscar,8/30/1996,1/1/9999
+d005,Development,110511,Hagimont,DeForest,1/1/1985,4/25/1992
+d005,Development,110567,DasSarma,Leon,4/25/1992,1/1/9999
+d006,Quality Management,110725,Onuegbe,Peternela,1/1/1985,5/6/1989
+d006,Quality Management,110765,Hofmeyr,Rutger,5/6/1989,9/12/1991
+d006,Quality Management,110800,Quadeer,Sanjoy,9/12/1991,6/28/1994
+d006,Quality Management,110854,Pesch,Dung,6/28/1994,1/1/9999
+d007,Sales,111035,Kaelbling,Przemyslawa,1/1/1985,3/7/1991
+d007,Sales,111133,Zhang,Hauke,3/7/1991,1/1/9999
+d008,Research,111400,Staelin,Arie,1/1/1985,4/8/1991
+d008,Research,111534,Kambil,Hilary,4/8/1991,1/1/9999
+d009,Customer Service,111692,Butterworth,Tonny,1/1/1985,10/17/1988
+d009,Customer Service,111784,Giarratana,Marjo,10/17/1988,9/8/1992
+d009,Customer Service,111877,Spinelli,Xiaobin,9/8/1992,1/3/1996
+d009,Customer Service,111939,Weedman,Yuchang,1/3/1996,1/1/9999
