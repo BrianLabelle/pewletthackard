@@ -16,7 +16,7 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 **Summaried below. Additional details available reviewing this document.**
 https://github.com/BrianLabelle/pewletthackard/blob/master/2019-PH-SQL-Employee-Database.docx
 
-**Original screenshots include salary as a Posmoney datatype which lead to problems in pandas, so an alter to the table afterwards with a change to a decimal datatype**
+**Original screenshots include salary column as a Postgres money datatype which lead to problems in pandas, so an alter to the table afterwards with a change to a decimal datatype**
 
 # 1. Data Modeling
 
