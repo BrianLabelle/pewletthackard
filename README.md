@@ -13,8 +13,7 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 2. Data Engineering
 3. Data Analysis
 
-**Summaried below. Additional details available reviewing this document.**
-https://github.com/BrianLabelle/pewletthackard/blob/master/2019-PH-SQL-Employee-Database.docx
+[**Summaried below. Additional details available reviewing this document.**](https://github.com/BrianLabelle/pewletthackard/blob/master/2019-PH-SQL-Employee-Database.docx)
 
 _**Original screenshots include salary column as a Postgres money datatype which lead to problems in pandas, so an alter to the table afterwards with a change to a decimal datatype**_
 
@@ -203,10 +202,20 @@ As you examine the data, you are overcome with a creeping suspicion that the dat
 
 1. Import the SQL database into Pandas.
 
+[**Jupyter NoteBooks Code Cell by Cell code**](https://github.com/BrianLabelle/pewletthackard/blob/master/archive/2019-Pewlett-Hackard-Jupyter-Notebook-Cells.txt)
+
 ![Data-Analysis-Pandas-DataFrame](images/ph-dataframe-avg-salary-by-title.jpg)
 
 
 ## **Create a bar chart of average salary by title.**
+
+      # plot dataframe for the average salary as a bar chart with the appropriate labels.
+      df_salaries2.plot.bar()
+      ax = df_salaries2['Average Salary'].plot(kind='bar', title ="Pewlett Hackard | Average Salary by Title", figsize=(15, 10), legend=False, fontsize=12)
+      plt.xlabel("Pewlett Hackard | Title")
+      plt.ylabel("Pewlett Hackard | Average Salary")
+
+      plt.show()
 
 ![Data-Analysis-Bar-Chart](images/ph-notebook-avg-salary-by-title.jpg)
 
