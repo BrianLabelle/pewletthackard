@@ -29,9 +29,9 @@ Eos zril delenit atomorum eu, vim eu modo incorrupte. Ea justo animal accusamus 
 ![PH-Data-Modeling](resources/2019-PH-SQL-ER-Diagram-Using-MySQL.png)
 
 
-Lorem ipsum dolor sit amet, vis quis option adversarium et. Dicam repudiare ius ei, vim ut eros laudem perfecto. Ad vix nemore utamur inciderint, sea no legimus ancillae. Et eirmod consequuntur nam, cu pri mutat consequuntur. Feugait percipit eu mei.
 
-Eos zril delenit atomorum eu, vim eu modo incorrupte. Ea justo animal accusamus vim. Graece meliore eos ut, per mazim liber cu, ea case wisi soluta pri. Eam no vidit atqui mentitum, essent accumsan mel ad. Vis ne tota nonumy torquatos, ne sit oratio officiis tractatos.
+To view the PostGres SQL Schema go to the below link.
+https://github.com/BrianLabelle/pewletthackard/blob/master/sql/2019-08-04-PostGres-SQL-Schema.sql
 
 
 # 3. Data Analysis
