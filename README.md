@@ -24,10 +24,25 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 
 # 2. Data Engineering
 
-![PH-Data-Modeling](resources/2019-PH-SQL-ER-Diagram-Using-MySQL.png)
+![PH-Data-Modeling](images/postgres-db.jpg)
 
 To view the PostGres SQL Schema go to the below link.
 https://github.com/BrianLabelle/pewletthackard/blob/master/sql/2019-08-04-PostGres-SQL-Schema.sql
+
+2.	Create SQL tables to house the required CSV files.
+It’s important to note that the sequence of creating the SQL tables is critical in order to properly implement the usage of primary keys & foreign keys constraints during the table creation phase. While it’s possible to alter the tables, it’s always best to map out the proper table creation sequence prior to starting. Creating the ER diagram helps with identifying the proper sequence. You must create the main data tables first that have no foreign key constraints, so Employees & Departments table are created first. The auxiliary supporting tables or passthrough join tables can only be created after as they contain foreign keys which point to the primary data tables. 
+
+It’s also important to note that using a standard naming convention with an underscore shows that these tables are used as passthrough join tables. dept_emp table naming implies that this is a join table between the departments table and the employees table with implies 1 department name to many employees. As opposed to a single named table as in employees which only contains employees.
+
+
+- [x] import employees.csv @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] import salaries.csv this is a complete item
+- [x] import titles.csv  this is a complete item
+- [x] import departments.csv list syntax required (any unordered or ordered list supported)
+- [x] import dept_emp.csv this is a complete item
+- [x] import dept_manager.csv this is a complete item
+
+- [x] import employees.csv this is an incomplete item
 
 
 # 3. Data Analysis
