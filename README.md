@@ -35,14 +35,13 @@ It’s important to note that the sequence of creating the SQL tables is critica
 It’s also important to note that using a standard naming convention with an underscore shows that these tables are used as passthrough join tables. dept_emp table naming implies that this is a join table between the departments table and the employees table with implies 1 department name to many employees. As opposed to a single named table as in employees which only contains employees.
 
 
-- [x] import employees.csv @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] import salaries.csv this is a complete item
-- [x] import titles.csv  this is a complete item
-- [x] import departments.csv list syntax required (any unordered or ordered list supported)
-- [x] import dept_emp.csv this is a complete item
-- [x] import dept_manager.csv this is a complete item
-
-- [x] import employees.csv this is an incomplete item
+      - [x] import employees.csv @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+      - [x] import salaries.csv this is a complete item
+      - [x] import titles.csv  this is a complete item
+      - [x] import departments.csv list syntax required (any unordered or ordered list supported)
+      - [x] import dept_emp.csv this is a complete item
+      - [x] import dept_manager.csv this is a complete item
+      - [x] import employees.csv this is an incomplete item
 
 
 # 3. Data Analysis
