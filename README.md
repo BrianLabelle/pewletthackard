@@ -53,8 +53,6 @@ It’s also important to note that using a **standard naming convention with an 
 
 # 3. Data Analysis
 
-![PH-Data-Modeling](images/da-001.jpg)
-
 Once we have completed the imports, we need to address the following:
 
 **1.List the following details of each employee: 
@@ -64,7 +62,11 @@ employee number, last name, first name, gender, and salary.**
             left join salaries s on s.emp_no = e.emp_no 
             order by emp_no
 
-Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-01.csv
+
+[Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-01.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-01.csv)
+
+
+![Data-Analysis-Screenshot-001](images/da-001.jpg)
 
 
 
