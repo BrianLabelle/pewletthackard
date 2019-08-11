@@ -101,7 +101,7 @@ or order by 1986 then month then day then employee number.
 
 _________________________________________________________________________________
 
-**3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name, and start and end employment dates. **
+**3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name, and start and end employment dates.**
 
             select d.dept_no, d.dept_name, e.emp_no, e.last_name, e.first_name, dm.from_date, dm.to_date from dept_manager as dm
             join employees e on dm.emp_no = e.emp_no
@@ -119,7 +119,7 @@ ________________________________________________________________________________
 
 **4. List the department of each employee with the following information: employee number, last name, first name, and department name.**
 
-_***Note several employees are possibly in multiple departments.**_
+      _***Note several employees are possibly in multiple departments and/or have received promotions based date ranges with different titles and departments.**_
 
             select e.emp_no, e.last_name, e.first_name, d.dept_name from dept_emp as de
             join employees e on de.emp_no = e.emp_no
