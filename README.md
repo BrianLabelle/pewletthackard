@@ -68,7 +68,7 @@ employee number, last name, first name, gender, and salary.**
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-01.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-01.csv)
 
-Screenshot of subset of data, download CSV file for entire results.
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-001](images/da-001.jpg)
 
 
@@ -84,7 +84,7 @@ The query with an order by employee number.
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-Emp-No.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-Emp-No.csv)
 
-Screenshot of subset of data, download CSV file for entire results.
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-002](images/da-002.jpg)
 
 or order by 1986 then month then day then employee number.
@@ -96,7 +96,7 @@ or order by 1986 then month then day then employee number.
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-1986-Month-Day-Emp_No.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-1986-Month-Day-Emp_No.csv)
 
-Screenshot of subset of data, download CSV file for entire results.
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-002b](images/da-002b.jpg)
 
 _________________________________________________________________________________
@@ -111,7 +111,7 @@ ________________________________________________________________________________
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-03-Dept-Managers.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-03-Dept-Managers.csv)
 
-Screenshot of subset of data, download CSV file for entire results.
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-003](images/da-003.jpg)
 
 
@@ -130,7 +130,7 @@ _***Note several employees are possibly in multiple departments and/or have rece
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-04-Dept-Employees.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-04-Dept-Employees.csv)
 
-Screenshot of subset of data, download CSV file for entire results.
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-004](images/da-004.jpg)
 
 
@@ -144,7 +144,7 @@ ________________________________________________________________________________
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-05-Hercules-B.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-05-Hercules-B.csv)
 
-Screenshot of subset of data, download CSV file for entire results.
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-005](images/da-005.jpg)
 
 
@@ -160,7 +160,7 @@ ________________________________________________________________________________
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-06-Sales.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-06-Sales.csv)
 
-Screenshot of subset of data, download CSV file for entire results.
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-006](images/da-006.jpg)
 
 
@@ -177,7 +177,7 @@ ________________________________________________________________________________
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-07-Sales-Development.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-07-Sales-Development.csv)
 
-Screenshot of subset of data, download CSV file for entire results.
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-007](images/da-007.jpg)
 
 
@@ -192,7 +192,7 @@ ________________________________________________________________________________
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-08-Last_Name_Count_Desc.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-08-Last_Name_Count_Desc.csv)
 
-Screenshot of subset of data, download CSV file for entire results.
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-008](images/da-008.jpg)
 
 
@@ -241,9 +241,7 @@ ________________________________________________________________________________
 [click to view Jupyter Notebook file](https://github.com/BrianLabelle/pewletthackard/blob/master/HW-07-Postgres-Employee_Database-Bonus.ipynb)
 
 
-
-
-
+_________________________________________________________________________________
 
 
 ## Submission
