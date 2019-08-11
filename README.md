@@ -55,7 +55,7 @@ It’s also important to note that using a **standard naming convention with an 
 
 Once we have completed the imports, we need to address the following:
 
-**1.List the following details of each employee: 
+**1. List the following details of each employee: 
 employee number, last name, first name, gender, and salary.**
 
             select e.emp_no, e.last_name, e.first_name, e.gender, s.salary from employees e
@@ -69,26 +69,178 @@ employee number, last name, first name, gender, and salary.**
 ![Data-Analysis-Screenshot-001](images/da-001.jpg)
 
 
+=========================================================================================================================
+
+**2. List employees who were hired in 1986.**
+The query with an order by employee number.
+
+            select * from employees
+            where date_part('year',hire_date) = 1986
+            order by emp_no
+
+
+[Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-Emp-No.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-Emp-No.csv)
+
+
+![Data-Analysis-Screenshot-002](images/da-002.jpg)
+
+or order by 1986 then month then day then employee number.
+
+            select * from employees
+            where date_part('year',hire_date) = 1986
+            order by date_part('month',hire_date), date_part('day',hire_date),emp_no 
+
+
+[Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-1986-Month-Day-Emp_No.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-1986-Month-Day-Emp_No.csv)
+
+
+![Data-Analysis-Screenshot-002b](images/da-002b.jpg)
+
+=========================================================================================================================
+**3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name, and start and end employment dates. **
+
+            select d.dept_no, d.dept_name, e.emp_no, e.last_name, e.first_name, dm.from_date, dm.to_date from dept_manager as dm
+            join employees e on dm.emp_no = e.emp_no
+            join departments d on d.dept_no = dm.dept_no
+
+
+
+[Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-03-Dept-Managers.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-03-Dept-Managers.csv)
+
+
+![Data-Analysis-Screenshot-003](images/da-003.jpg)
+
+
+=========================================================================================================================
+**4. List the department of each employee with the following information: employee number, last name, first name, and department name.**
+
+_***Note several employees are possibly in multiple departments.**_
+
+            select e.emp_no, e.last_name, e.first_name, d.dept_name from dept_emp as de
+            join employees e on de.emp_no = e.emp_no
+            join departments d on d.dept_no = de.dept_no
+            order by emp_no
+
+
+[Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-04-Dept-Employees.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-04-Dept-Employees.csv)
+
+
+![Data-Analysis-Screenshot-004](images/da-004.jpg)
+
+
+=========================================================================================================================
+
+
+**5. List all employees whose first name is "Hercules" and last names begin with "B."**
+
+            select * from employees
+            where first_name = 'Hercules' and last_name LIKE 'B%'
+            order by emp_no
+
+[Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-05-Hercules-B.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-05-Hercules-B.csv)
+
+
+![Data-Analysis-Screenshot-005](images/da-005.jpg)
+
+
+=========================================================================================================================
+
+**6. List all employees in the Sales department, including their employee number, last name, first name, and department name.**
+
+            select e.emp_no, e.last_name, e.first_name, d.dept_name from dept_emp as de
+            join employees e on de.emp_no = e.emp_no
+            join departments d on d.dept_no = de.dept_no
+            where dept_name = 'Sales'
+            order by emp_no
+
+[Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-06-Sales.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-06-Sales.csv)
+
+
+![Data-Analysis-Screenshot-006](images/da-006.jpg)
+
+
+=========================================================================================================================
+
+**7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.**
+
+
+            select e.emp_no, e.last_name, e.first_name, d.dept_name from dept_emp as de
+            join employees e on de.emp_no = e.emp_no
+            join departments d on d.dept_no = de.dept_no
+            where dept_name in('Sales','Development')
+            order by emp_no
+
+[Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-07-Sales-Development.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-07-Sales-Development.csv)
+
+
+![Data-Analysis-Screenshot-007](images/da-007.jpg)
+
+
+=========================================================================================================================
+
+**8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.**
+
+            select last_name, count(*) as count_name from employees
+            group by last_name
+            order by count_name desc
+
+
+[Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-08-Last_Name_Count_Desc.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-08-Last_Name_Count_Desc.csv)
+
+
+![Data-Analysis-Screenshot-008](images/da-008.jpg)
+
+
+=========================================================================================================================
+
+ # **BONUS**
+As you examine the data, you are overcome with a creeping suspicion that the dataset is fake. You surmise that your boss handed you spurious data in order to test the data engineering skills of a new employee. To confirm your hunch, you decide to take the following steps to generate a visualization of the data, with which you will confront your boss:
+
+1. Import the SQL database into Pandas.
+
+![Data-Analysis-Pandas-DataFrame](images/ph-dataframe-avg-salary-by-title.jpg)
+
+
+# **Create a bar chart of average salary by title.**
+
+![Data-Analysis-Bar-Chart](images/ph-notebook-avg-salary-by-title.jpg)
+
+
+=========================================================================================================================
+
+ # **EPILOGUE**
+Evidence in hand, you march into your boss's office and present the visualization. With a sly grin, your boss thanks you for your work. On your way out of the office, you hear the words, "Search your ID number." You look down at your badge to see that your employee ID number is 499942.
+
+**Employee Number : 499942.**
+
+            select * from employees where emp_no = '499942'
+
+
+![Data-Analysis-Epilogue](images/epilogue.jpg)
 
 
 
 
-
-
+=========================================================================================================================
 
 
 
 ## Summary
 
-Lorem ipsum dolor sit amet, vis quis option adversarium et. Dicam repudiare ius ei, vim ut eros laudem perfecto. Ad vix nemore utamur inciderint, sea no legimus ancillae. Et eirmod consequuntur nam, cu pri mutat consequuntur. Feugait percipit eu mei.
+**Create an image file of your ERD.**
+[Download Image](https://github.com/BrianLabelle/pewletthackard/blob/master/images/2019-PH-SQL-ER-Diagram-Using-MySQL.jpg)
 
-Eos zril delenit atomorum eu, vim eu modo incorrupte. Ea justo animal accusamus vim. Graece meliore eos ut, per mazim liber cu, ea case wisi soluta pri. Eam no vidit atqui mentitum, essent accumsan mel ad. Vis ne tota nonumy torquatos, ne sit oratio officiis tractatos.
+**Create a .sql file of your table schemata.**
+[Click to view SQL Schema file](https://github.com/BrianLabelle/pewletthackard/blob/master/sql/2019-08-04-PostGres-SQL-Schema.sql)
 
-Ut mucius ceteros atomorum vim, reque nostrud dolores ex qui, eu qui quodsi feugait voluptaria. Usu volumus periculis ad, quo possit phaedrum conceptam ex, mea saperet facilisi conceptam te. Aeque dictas persius usu cu. Summo postea percipit in vel.
+**Create a .sql file of your queries.**
+[Click to view SQL query file](https://github.com/BrianLabelle/pewletthackard/blob/master/sql/2019-Pewlett-Hackard-Data-Analysis-Answers.sql)
 
-Ex his aliquip tamquam, nam te posse ullum nonumes, diceret recusabo consequuntur vis no. At mea brute dolor. Has no verear expetenda, eu vidit euismod facilisi sed, purto noster sit ne. Vim sumo ancillae et, an omittam vivendum nam. Per ne accusam pericula. Graeci habemus electram qui ut, semper epicurei referrentur ius ut, in porro etiam elaboraret has.
+**(Optional) Create a Jupyter Notebook of the bonus analysis.**
+[click to view Jupyter Notebook file](https://github.com/BrianLabelle/pewletthackard/blob/master/HW-07-Postgres-Employee_Database-Bonus.ipynb)
 
-Ad eum quot error soleat, in sea solum possim, eos quodsi dissentias id. Vix exerci euismod civibus id, eam clita delenit maiestatis ut. Natum invidunt aliquando at nam, sed ex viderer volutpat. Fabellas eloquentiam philosophia cum id, cu ceteros argumentum consequuntur mei, magna munere temporibus no has. Per et quot brute definiebas, pri ad melius atomorum, his in iudico singulis sententiae. Tritani nostrud liberavisse has ex, electram percipitur mel te, no natum alienum necessitatibus quo.
+
+
 
 
 
