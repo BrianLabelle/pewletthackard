@@ -24,10 +24,30 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 
 # 2. Data Engineering
 
-![PH-Data-Modeling](resources/2019-PH-SQL-ER-Diagram-Using-MySQL.png)
+![PH-Data-Modeling](images/postgres-db.jpg)
 
 To view the PostGres SQL Schema go to the below link.
 https://github.com/BrianLabelle/pewletthackard/blob/master/sql/2019-08-04-PostGres-SQL-Schema.sql
+
+2.	Create SQL tables to house the required CSV files.
+It’s important to note that the sequence of creating the SQL tables is critical in order to properly implement the usage of primary keys & foreign keys constraints during the table creation phase. While it’s possible to alter the tables, it’s always best to map out the proper table creation sequence prior to starting. Creating the ER diagram helps with identifying the proper sequence. You must create the main data tables first that have no foreign key constraints, so Employees & Departments table are created first. The auxiliary supporting tables or passthrough join tables can only be created after as they contain foreign keys which point to the primary data tables. 
+
+It’s also important to note that using a **standard naming convention with an underscore** shows that these tables are used as passthrough join tables. dept_emp table naming implies that this is a join table between the departments table and the employees table with implies 1 department name to many employees. As opposed to a single named table as in employees which only contains employees.
+
+1. Create the Employees table with the emp_no as the primary key.
+2. Create the departments table with the dept_no as primary key.
+3. Creating the salaries & titles tables, they do not have any primary keys but they do have foreign keys back into the employees table.
+4. Creating the dept_manager & dept_emp tables have 2 foreign keys which reference the employees table and the departments table.
+5. When possible, default values were set based on possible future data entries if project is deemed usable. A default hiredate in the employee table was set to CURRENTDATE. Many other date fields called to_date were set with a default value of 9999-01-01 as a date in the future.
+
+6. Next step is to import the CSV files into the tables.
+      - [x] import employees.csv 
+      - [x] import salaries.csv
+      - [x] import titles.csv
+      - [x] import departments.csv
+      - [x] import dept_emp.csv
+      - [x] import dept_manager.csv
+      - [x] import employees.csv
 
 
 # 3. Data Analysis
