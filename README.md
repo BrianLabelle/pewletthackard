@@ -1,4 +1,4 @@
-# Unit 7 Homework: Employee Database: A Mystery in Two Parts
+# Homework 7: Employee Database: Mystery in Two Parts
 
 ![PewlettHackard](images/ph-logo-trimmed.jpg)
 
