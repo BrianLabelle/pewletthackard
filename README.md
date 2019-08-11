@@ -202,7 +202,7 @@ As you examine the data, you are overcome with a creeping suspicion that the dat
 
 1. Import the SQL database into Pandas.
 
-[**Jupyter NoteBooks Code Cell by Cell code**](https://github.com/BrianLabelle/pewletthackard/blob/master/archive/2019-Pewlett-Hackard-Jupyter-Notebook-Cells.txt)
+[**Click to view the Jupyter Notebooks Code Cell by Cell**](https://github.com/BrianLabelle/pewletthackard/blob/master/archive/2019-Pewlett-Hackard-Jupyter-Notebook-Cells.txt)
 
 ![Data-Analysis-Pandas-DataFrame](images/ph-dataframe-avg-salary-by-title.jpg)
 
