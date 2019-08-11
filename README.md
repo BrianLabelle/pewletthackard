@@ -16,6 +16,8 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 **Summaried below. Additional details available reviewing this document.**
 https://github.com/BrianLabelle/pewletthackard/blob/master/2019-PH-SQL-Employee-Database.docx
 
+**Original screenshots include salary as a Posmoney datatype which lead to problems in pandas, so an alter to the table afterwards with a change to a decimal datatype**
+
 # 1. Data Modeling
 
 ![PH-Data-Modeling](resources/2019-PH-SQL-ER-Diagram-Using-MySQL.png)
@@ -55,6 +57,7 @@ It’s also important to note that using a **standard naming convention with an 
 
 Once we have completed the imports, we need to address the following:
 
+
 **1. List the following details of each employee: 
 employee number, last name, first name, gender, and salary.**
 
@@ -69,7 +72,7 @@ employee number, last name, first name, gender, and salary.**
 ![Data-Analysis-Screenshot-001](images/da-001.jpg)
 
 
-=========================================================================================================================
+_________________________________________________________________________________
 
 **2. List employees who were hired in 1986.**
 The query with an order by employee number.
@@ -96,7 +99,8 @@ or order by 1986 then month then day then employee number.
 
 ![Data-Analysis-Screenshot-002b](images/da-002b.jpg)
 
-=========================================================================================================================
+_________________________________________________________________________________
+
 **3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name, and start and end employment dates. **
 
             select d.dept_no, d.dept_name, e.emp_no, e.last_name, e.first_name, dm.from_date, dm.to_date from dept_manager as dm
@@ -111,7 +115,8 @@ or order by 1986 then month then day then employee number.
 ![Data-Analysis-Screenshot-003](images/da-003.jpg)
 
 
-=========================================================================================================================
+_________________________________________________________________________________
+
 **4. List the department of each employee with the following information: employee number, last name, first name, and department name.**
 
 _***Note several employees are possibly in multiple departments.**_
@@ -128,8 +133,7 @@ _***Note several employees are possibly in multiple departments.**_
 ![Data-Analysis-Screenshot-004](images/da-004.jpg)
 
 
-=========================================================================================================================
-
+_________________________________________________________________________________
 
 **5. List all employees whose first name is "Hercules" and last names begin with "B."**
 
@@ -143,7 +147,7 @@ _***Note several employees are possibly in multiple departments.**_
 ![Data-Analysis-Screenshot-005](images/da-005.jpg)
 
 
-=========================================================================================================================
+_________________________________________________________________________________
 
 **6. List all employees in the Sales department, including their employee number, last name, first name, and department name.**
 
@@ -159,7 +163,7 @@ _***Note several employees are possibly in multiple departments.**_
 ![Data-Analysis-Screenshot-006](images/da-006.jpg)
 
 
-=========================================================================================================================
+_________________________________________________________________________________
 
 **7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.**
 
@@ -176,7 +180,7 @@ _***Note several employees are possibly in multiple departments.**_
 ![Data-Analysis-Screenshot-007](images/da-007.jpg)
 
 
-=========================================================================================================================
+_________________________________________________________________________________
 
 **8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.**
 
@@ -191,7 +195,7 @@ _***Note several employees are possibly in multiple departments.**_
 ![Data-Analysis-Screenshot-008](images/da-008.jpg)
 
 
-=========================================================================================================================
+_________________________________________________________________________________
 
  # **BONUS**
 As you examine the data, you are overcome with a creeping suspicion that the dataset is fake. You surmise that your boss handed you spurious data in order to test the data engineering skills of a new employee. To confirm your hunch, you decide to take the following steps to generate a visualization of the data, with which you will confront your boss:
@@ -201,12 +205,12 @@ As you examine the data, you are overcome with a creeping suspicion that the dat
 ![Data-Analysis-Pandas-DataFrame](images/ph-dataframe-avg-salary-by-title.jpg)
 
 
-# **Create a bar chart of average salary by title.**
+## **Create a bar chart of average salary by title.**
 
 ![Data-Analysis-Bar-Chart](images/ph-notebook-avg-salary-by-title.jpg)
 
 
-=========================================================================================================================
+_________________________________________________________________________________
 
  # **EPILOGUE**
 Evidence in hand, you march into your boss's office and present the visualization. With a sly grin, your boss thanks you for your work. On your way out of the office, you hear the words, "Search your ID number." You look down at your badge to see that your employee ID number is 499942.
@@ -219,13 +223,9 @@ Evidence in hand, you march into your boss's office and present the visualizatio
 ![Data-Analysis-Epilogue](images/epilogue.jpg)
 
 
+_________________________________________________________________________________
 
-
-=========================================================================================================================
-
-
-
-## Summary
+# Summary
 
 **Create an image file of your ERD.**
 [Download Image](https://github.com/BrianLabelle/pewletthackard/blob/master/images/2019-PH-SQL-ER-Diagram-Using-MySQL.jpg)
