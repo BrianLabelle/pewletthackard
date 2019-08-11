@@ -1,0 +1,41 @@
+HW-07-Postgres-Employee_Database-Bonus
+
+# Import all dependant libraries & connect to postgres database called pweletthackard on local workstation.
+import pandas as pd
+import sqlalchemy
+import psycopg2
+import matplotlib as plt
+%matplotlib inline
+%matplotlib notebook
+import matplotlib.pyplot as plt
+import numpy as np
+from sqlalchemy import create_engine
+engine = create_engine('postgresql://postgres:password@localhost:5432/pewletthackard')
+connection = engine.connect()
+
+# Run an SQL select all from employees table to get a peek into the data.
+pd.read_sql_query('''SELECT * FROM employees;''', engine)
+
+# create a dataframe called salaries to store the results from the SQL select all from salaries table to get a peek into the data and assign to a pandas dataframe
+df_salaries = pd.read_sql_query('''SELECT * FROM salaries;''', engine)
+df_salaries
+
+# create a new dataframe and insert the title from titles database, calculate the sum of the salaries by title rounded to 2 decimal places.
+df_salaries2 = pd.read_sql_query('''select t.title as "Title", round(sum(salary)/count(*),2) as "Average Salary" from salaries s
+join titles t on t.emp_no = s.emp_no
+group by t.title;''', engine)
+df_salaries2
+
+
+# set the Index to title inplace by dropping the index.
+# https://www.dataquest.io/blog/adding-axis-labels-to-plots-with-pandas-and-matplotlib/
+
+df_salaries2.set_index('Title',drop=True, inplace=True)
+
+# plot dataframe for the average salary as a bar chart with the appropriate labels.
+df_salaries2.plot.bar()
+ax = df_salaries2['Average Salary'].plot(kind='bar', title ="Pewlett Hackard | Average Salary by Title", figsize=(15, 10), legend=False, fontsize=12)
+plt.xlabel("Pewlett Hackard | Title")
+plt.ylabel("Pewlett Hackard | Average Salary")
+
+plt.show()

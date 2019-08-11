@@ -1,4 +1,4 @@
-2019-08-04-PostGres-SQL to Generate Database & Tables.
+-- 2019-08-04-PostGres-SQL to Generate Database & Tables.
 
 CREATE DATABASE pewletthackard
     WITH 
@@ -10,10 +10,7 @@ COMMENT ON DATABASE pewletthackard
     IS 'Pewlett Hackard Employees 1980-1999 Project';
 
 
-==========================================================================================
--- Table: public.employees
-
--- DROP TABLE public.employees;
+-- ==========================================================================================
 
 CREATE TABLE public.employees
 (
@@ -33,12 +30,12 @@ TABLESPACE pg_default;
 ALTER TABLE public.employees
     OWNER to postgres;
 COMMENT ON TABLE public.employees
-    IS 'Employee Table for Pewlett Hackard Employees 1980-1999 Project ';
+    IS 'Employee Table for Pewlett Hackard Employees 1980-1999 Project';
 
 
 
 
-==========================================================================================
+-- ==========================================================================================
 
 
 CREATE TABLE public.departments
@@ -55,11 +52,11 @@ TABLESPACE pg_default;
 ALTER TABLE public.departments
     OWNER to postgres;
 COMMENT ON TABLE public.departments
-    IS 'Departments Table for Pewlett Hackard Employees 1980-1999 Project ';
+    IS 'Departments Table for Pewlett Hackard Employees 1980-1999 Project';
 
 
 
-==========================================================================================
+-- ==========================================================================================
 CREATE TABLE public.titles
 (
     emp_no integer NOT NULL,
@@ -85,12 +82,12 @@ COMMENT ON CONSTRAINT fk_emp_no ON public.titles
     IS 'Employee Foreign Key in titles table which is Primary Key in Employees table.';
 
 
-==========================================================================================
+-- ==========================================================================================
 
 CREATE TABLE public.salaries
 (
     emp_no integer NOT NULL,
-    salary money NOT NULL,
+    salary numeric NOT NULL,
     from_date date NOT NULL,
     to_date date NOT NULL DEFAULT '9999-01-01'::date,
     CONSTRAINT fk_emp_no FOREIGN KEY (emp_no)
@@ -112,7 +109,7 @@ COMMENT ON CONSTRAINT fk_emp_no ON public.salaries
     IS 'Employee Foreign Key in salaries table which is Primary Key in Employees table.';
 
 
-==========================================================================================
+-- ==========================================================================================
 CREATE TABLE public.dept_emp
 (
     emp_no integer NOT NULL,
@@ -144,7 +141,7 @@ COMMENT ON CONSTRAINT fk_emp_no ON public.dept_emp
     IS 'Employee Foreign Key in dept_emp table which is Primary Key in Employees table.';
 
 
-==========================================================================================
+-- ==========================================================================================
 
 CREATE TABLE public.dept_manager
 (
@@ -180,7 +177,7 @@ COMMENT ON CONSTRAINT fk_emp_no ON public.dept_manager
 
 
 
-==========================================================================================
+-- ==========================================================================================
 
 
 
