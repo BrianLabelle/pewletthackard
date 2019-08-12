@@ -13,10 +13,9 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 2. Data Engineering
 3. Data Analysis
 
-**Summaried below. Additional details available reviewing this document.**
-https://github.com/BrianLabelle/pewletthackard/blob/master/2019-PH-SQL-Employee-Database.docx
+[**Summaried below. Additional details available reviewing this document.**](https://github.com/BrianLabelle/pewletthackard/blob/master/2019-PH-SQL-Employee-Database.docx)
 
-**Original screenshots include salary as a Posmoney datatype which lead to problems in pandas, so an alter to the table afterwards with a change to a decimal datatype**
+_**Original screenshots include salary column as a Postgres money datatype which lead to problems in pandas, so an alter to the table afterwards with a change to a numeric datatype**_
 
 # 1. Data Modeling
 
@@ -68,7 +67,7 @@ employee number, last name, first name, gender, and salary.**
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-01.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-01.csv)
 
-
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-001](images/da-001.jpg)
 
 
@@ -84,7 +83,7 @@ The query with an order by employee number.
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-Emp-No.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-Emp-No.csv)
 
-
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-002](images/da-002.jpg)
 
 or order by 1986 then month then day then employee number.
@@ -96,12 +95,12 @@ or order by 1986 then month then day then employee number.
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-1986-Month-Day-Emp_No.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-02-Order-By-1986-Month-Day-Emp_No.csv)
 
-
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-002b](images/da-002b.jpg)
 
 _________________________________________________________________________________
 
-**3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name, and start and end employment dates. **
+**3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name, and start and end employment dates.**
 
             select d.dept_no, d.dept_name, e.emp_no, e.last_name, e.first_name, dm.from_date, dm.to_date from dept_manager as dm
             join employees e on dm.emp_no = e.emp_no
@@ -111,7 +110,7 @@ ________________________________________________________________________________
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-03-Dept-Managers.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-03-Dept-Managers.csv)
 
-
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-003](images/da-003.jpg)
 
 
@@ -119,7 +118,8 @@ ________________________________________________________________________________
 
 **4. List the department of each employee with the following information: employee number, last name, first name, and department name.**
 
-_***Note several employees are possibly in multiple departments.**_
+_***Note several employees are possibly in multiple departments and/or have received promotions based date ranges with different titles and departments.**_
+
 
             select e.emp_no, e.last_name, e.first_name, d.dept_name from dept_emp as de
             join employees e on de.emp_no = e.emp_no
@@ -129,7 +129,7 @@ _***Note several employees are possibly in multiple departments.**_
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-04-Dept-Employees.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-04-Dept-Employees.csv)
 
-
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-004](images/da-004.jpg)
 
 
@@ -143,7 +143,7 @@ ________________________________________________________________________________
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-05-Hercules-B.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-05-Hercules-B.csv)
 
-
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-005](images/da-005.jpg)
 
 
@@ -159,7 +159,7 @@ ________________________________________________________________________________
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-06-Sales.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-06-Sales.csv)
 
-
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-006](images/da-006.jpg)
 
 
@@ -176,7 +176,7 @@ ________________________________________________________________________________
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-07-Sales-Development.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-07-Sales-Development.csv)
 
-
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-007](images/da-007.jpg)
 
 
@@ -191,7 +191,7 @@ ________________________________________________________________________________
 
 [Download CSV File: 2019-08-Pewlett-Hackard-Data-Analysis-Question-08-Last_Name_Count_Desc.csv](https://github.com/BrianLabelle/pewletthackard/blob/master/data_analysis/2019-08-Pewlett-Hackard-Data-Analysis-Question-08-Last_Name_Count_Desc.csv)
 
-
+Screenshot is a subset of the query data results, download CSV file for entire results.
 ![Data-Analysis-Screenshot-008](images/da-008.jpg)
 
 
@@ -202,10 +202,20 @@ As you examine the data, you are overcome with a creeping suspicion that the dat
 
 1. Import the SQL database into Pandas.
 
+[**Click to view the Jupyter Notebooks Code Cell by Cell**](https://github.com/BrianLabelle/pewletthackard/blob/master/archive/2019-Pewlett-Hackard-Jupyter-Notebook-Cells.txt)
+
 ![Data-Analysis-Pandas-DataFrame](images/ph-dataframe-avg-salary-by-title.jpg)
 
 
 ## **Create a bar chart of average salary by title.**
+
+      # plot dataframe for the average salary as a bar chart with the appropriate labels.
+      df_salaries2.plot.bar()
+      ax = df_salaries2['Average Salary'].plot(kind='bar', title ="Pewlett Hackard | Average Salary by Title", figsize=(15, 10), legend=False, fontsize=12)
+      plt.xlabel("Pewlett Hackard | Title")
+      plt.ylabel("Pewlett Hackard | Average Salary")
+
+      plt.show()
 
 ![Data-Analysis-Bar-Chart](images/ph-notebook-avg-salary-by-title.jpg)
 
@@ -240,9 +250,7 @@ ________________________________________________________________________________
 [click to view Jupyter Notebook file](https://github.com/BrianLabelle/pewletthackard/blob/master/HW-07-Postgres-Employee_Database-Bonus.ipynb)
 
 
-
-
-
+_________________________________________________________________________________
 
 
 ## Submission
